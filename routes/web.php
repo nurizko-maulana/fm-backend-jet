@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\API\MidtransController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::resource('todo', TodoController::class)->middleware('auth:sanctum');
+
+
+//midtrans related
+Route::get('midtrans/success', [MidtransController::class , 'success']);
+Route::get('midtrans/unfinish', [MidtransController::class , 'unfinish']);
+Route::get('midtrans/eror', [MidtransController::class , 'error']);
+

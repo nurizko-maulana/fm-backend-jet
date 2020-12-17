@@ -30,4 +30,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'midtrans' => [
+        'serverKey' => env('MIDTRANS_SERVER_KEY'),
+        'clientKey' => env('MIDTTRANS_CLIENT_KEY'),
+        'isProduction' => env('MIDTTRANSIS_PRODUCTION', false),
+        'isSanitized' => env('MIDTTRANS_IS_SANITIZED', true),
+        'is3sd' => env('MIDTRANS_IS_3DS', true),
+    ],
+
 ];

@@ -33,3 +33,4 @@ Route::post('register', [UserController::class, 'register']);
 
 //Food Route
 Route::get('food', [FoodController::class], 'all' );
+
